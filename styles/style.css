@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+.promo-card {
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.promo-card-rasberry {
+  background-image: url("../img/bg-promo-raspberry.png");
+}
+
+.promo-card-marshmallow {
+  background-image: url("../img/bg-promo-marshmallow.png");
+}
+
+.about {
+  background-image: url("../img/bg-waffle.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.news-card {
+  background-image: url("../img/bg-blog.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.subscribe {
+  background-image: url("../img/bg-subscrube.jpg");
+  background-position: top left;
+  background-repeat: repeat;
+  background-size: 58px 67px;
+}
+
+.delivery {
+  background-image: url("../img/bg-delivery.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contacts {
+  background-image: url("../img/bg-contacts.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

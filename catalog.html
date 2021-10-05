@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси - онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</title>
+    <link rel="stylesheet" href="styles/style.css">
   </head>
   <body class="page-body">
     <header class="page-header">
       <nav class="main-nav">
-        <a class="logo">
-          <img src="" alt="Логотип Глейси.">
+        <a class="logo" href="index.html">
+          <img src="img/logo-main.svg" width="137" height="56" alt="Логотип Глейси.">
         </a>
         <ul class="main-menu">
           <li class="menu-item">
@@ -61,19 +62,17 @@
           </select>
         </label>
         <fieldset class="filter-group filter-price-range range-field">
-          <legend class="filter-group-caption">Цена: 100 ₽ – 500 ₽</legend>
+          <legend class="filter-group-caption">
+            Цена:
+            <span class="visually-hidden">минимальная цена </span><input type="number" value="100" name="filter-price-min"> ₽ –
+            <span class="visually-hidden">максимальная цена </span><input type="number" value="500" name="filter-price-max"> ₽
+          </legend>
           <div class="filter-group-inner">
             <div class="field-range-line"></div>
             <div class="field-range-fill"></div>
             <div class="field-range-min"></div>
             <div class="field-range-max"></div>
           </div>
-          <label class="visually-hidden">
-            <input type="number" value="100" name="filter-price-min">
-          </label>
-          <label class="visually-hidden">
-            <input type="number" value="500" name="filter-price-max">
-          </label>
         </fieldset>
         <fieldset class="filter-group filter-fat">
           <legend class="filter-group-caption">Жирность:</legend>
@@ -126,7 +125,7 @@
       <div class="catalog-list">
         <article class="product-card">
           <a class="product-card-image-link" href="#">
-            <img src="" alt="">
+            <img src="img/catalog/icecream-raspberries.jpg" width="168" height="168" alt="">
           </a>
           <h3 class="product-card-title">
             <a href="#">Малинка</a>
@@ -141,7 +140,7 @@
         </article>
         <article class="product-card">
           <a class="product-card-image-link" href="#">
-            <img src="" alt="">
+            <img src="img/catalog/icecream-pistachio.jpg" width="168" height="168" alt="">
           </a>
           <h3 class="product-card-title">
             <a href="#">Фисташка</a>
@@ -156,7 +155,7 @@
         </article>
         <article class="product-card">
           <a class="product-card-image-link" href="#">
-            <img src="" alt="">
+            <img src="img/catalog/icecream-blueberry.jpg" width="168" height="168" alt="">
           </a>
           <h3 class="product-card-title">
             <a href="#">Черника</a>
@@ -171,7 +170,7 @@
         </article>
         <article class="product-card">
           <a class="product-card-image-link" href="#">
-            <img src="" alt="">
+            <img src="img/catalog/icecream-bubblegum.jpg" width="168" height="168" alt="">
           </a>
           <h3 class="product-card-title">
             <a href="">Бабл-гам</a>
@@ -186,7 +185,7 @@
         </article>
         <article class="product-card">
           <a class="product-card-image-link" href="#">
-            <img src="" alt="">
+            <img src="img/catalog/icecream-blackberry.jpg" width="168" height="168" alt="">
           </a>
           <h3 class="product-card-title">
             <a href="">Ежевика</a>
@@ -201,7 +200,7 @@
         </article>
         <article class="product-card">
           <a class="product-card-image-link" href="#">
-            <img src="" alt="">
+            <img src="img/catalog/icecream-banana.jpg" width="168" height="168" alt="">
           </a>
           <h3 class="product-card-title">
             <a href="">Банан</a>
@@ -216,7 +215,7 @@
         </article>
         <article class="product-card">
           <a class="product-card-image-link" href="#">
-            <img src="" alt="">
+            <img src="img/catalog/icecream-chocolate.jpg" width="168" height="168" alt="">
           </a>
           <h3 class="product-card-title">
             <a href="">Шоколадка</a>
@@ -231,7 +230,7 @@
         </article>
         <article class="product-card">
           <a class="product-card-image-link" href="#">
-            <img src="" alt="">
+            <img src="img/catalog/icecream-strawberry.jpg" width="168" height="168" alt="">
           </a>
           <h3 class="product-card-title">
             <a href="">Клубничка</a>
@@ -246,7 +245,7 @@
         </article>
         <article class="product-card">
           <a class="product-card-image-link" href="#">
-            <img src="" alt="">
+            <img src="img/catalog/icecream-lemon.jpg" width="168" height="168" alt="">
           </a>
           <h3 class="product-card-title">
             <a href="">Лимон</a>
@@ -261,7 +260,7 @@
         </article>
         <article class="product-card">
           <a class="product-card-image-link" href="#">
-            <img src="" alt="">
+            <img src="img/catalog/icecream-menthol.jpg" width="168" height="168" alt="">
           </a>
           <h3 class="product-card-title">
             <a href="">Ментол</a>
@@ -276,7 +275,7 @@
         </article>
         <article class="product-card">
           <a class="product-card-image-link" href="#">
-            <img src="" alt="">
+            <img src="img/catalog/icecream-nut.jpg" width="168" height="168" alt="">
           </a>
           <h3 class="product-card-title">
             <a href="">Орешек</a>
@@ -291,7 +290,7 @@
         </article>
         <article class="product-card">
           <a class="product-card-image-link" href="#">
-            <img src="" alt="">
+            <img src="img/catalog/icecream-brulee.jpg" width="168" height="168" alt="">
           </a>
           <h3 class="product-card-title">
             <a href="">Крем-брюле</a>
@@ -375,7 +374,7 @@
       </div>
       <div class="creator">
         <a class="creator-logo" href="https://htmlacademy.ru/" rel="noopener nofollow" target="_blank">
-          <img src="" alt="Логотип html academy.">
+          <img src="img/logo-htmlacademy.svg" width="93" height="27" alt="Логотип html academy.">
         </a>
         <p class="creator-text">Сделано в <a class="creator-link" href="https://htmlacademy.ru/" rel="noopener nofollow" target="_blank">.html academy</a> © 2021</p>
       </div>

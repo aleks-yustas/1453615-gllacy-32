@@ -37,7 +37,7 @@
           </a>
         </div>
         <div class="user-menu-item">
-          <a class="header-button header-button-cart" href="#">Корзина</a>
+          <a class="header-button header-button-cart" href="#">Пусто</a>
         </div>
       </div>
     </header>
@@ -112,7 +112,7 @@
         <h2 class="section-title product-title">Попробуйте самые популярные вкусы нашего мороженого</h2>
         <div class="product-list">
           <article class="product-card">
-            <a class="product-card-image" href="#">
+            <a class="product-card-image-link" href="#">
               <img src="img/catalog/icecream-raspberries.jpg" width="168" height="168" alt="">
             </a>
             <h3 class="product-card-title">
@@ -127,7 +127,7 @@
             </div>
           </article>
           <article class="product-card">
-            <a class="product-card-image" href="#">
+            <a class="product-card-image-link" href="#">
               <img src="img/catalog/icecream-pistachio.jpg" width="168" height="168" alt="">
             </a>
             <h3 class="product-card-title">
@@ -142,7 +142,7 @@
             </div>
           </article>
           <article class="product-card">
-            <a class="product-card-image" href="#">
+            <a class="product-card-image-link" href="#">
               <img src="img/catalog/icecream-blueberry.jpg" width="168" height="168" alt="">
             </a>
             <h3 class="product-card-title">
@@ -157,7 +157,7 @@
             </div>
           </article>
           <article class="product-card">
-            <a class="product-card-image" href="#">
+            <a class="product-card-image-link" href="#">
               <img src="img/catalog/icecream-bubblegum.jpg" width="168" height="168" alt="">
             </a>
             <h3 class="product-card-title">
@@ -193,16 +193,18 @@
         <h2 class="visually-hidden">Подписка на рассылку</h2>
         <p class="subscribe-description">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/">
-          <label class="form-field">
+          <label class="form-field subscribe-input">
             <span class="visually-hidden">Введите емейл</span>
-            <input class="form-input" type="email" name="subscribe-email" placeholder="email@example.com" required>
+            <input class="form-field-input" type="email" name="subscribe-email" placeholder="email@example.com" required>
           </label>
-          <button class="button button-additional" type="submit">Отправить</button>
+          <button class="button button-additional subscribe-submit" type="submit">Отправить</button>
         </form>
       </section>
       <section class="delivery">
-        <h2 class="section-title delivery-title">Доставка любимого мороженого на дом</h2>
-        <p class="delivery-description">Хочется полакомиться любимым дессертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом и курьер привезет вам ваш заказ в течение часа!</p>
+        <div class="delivery-content">
+          <h2 class="section-title delivery-title">Доставка любимого мороженого на дом</h2>
+          <p class="delivery-description">Хочется полакомиться любимым дессертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом и курьер привезет вам ваш заказ в течение часа!</p>
+        </div>
         <div class="delivery-inner">
           <p class="delivery-description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
           <form class="delivery-form" method="post" action="https://echo.htmlacademy.ru/">
@@ -237,11 +239,15 @@
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts-card">
-          <h2 class="contacts-title">Адрес главного офиса и офлайн-магазина:</h2>
-          <address class="contacts-address">
-            <p class="contacts-address-text">наб. Реки Карповки, 5 лит П, Санкт-Петербург</p>
-            <p class="contacts-phone">Для заказов по телефону: <a class="contacts-phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a> <span class="contacts-phone-description">(с 10 до 20 ежедневно)</span></p>
-          </address>
+          <dl class="contacts-information">
+            <dt>Адрес главного офиса и офлайн-магазина:</dt>
+            <dd>наб. Реки Карповки, 5 лит П, Санкт-Петербург</dd>
+            <dt>Для заказов по телефону:</dt>
+            <dd>
+              <a class="contacts-phone-link" href="tel:+78128121212">+7 (812) 812-12-12</a>
+              <span class="contacts-phone-description">(с 10 до 20 ежедневно)</span>
+            </dd>
+          </dl>
           <button class="button button-additional" type="button">Форма обратной связи</button>
         </div>
       </section>

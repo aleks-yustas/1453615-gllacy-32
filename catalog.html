@@ -64,8 +64,8 @@
         <fieldset class="filter-group filter-price-range range-field">
           <legend class="filter-group-caption">
             Цена:
-            <span class="visually-hidden">минимальная цена </span><input type="number" value="100" name="filter-price-min"> ₽ –
-            <span class="visually-hidden">максимальная цена </span><input type="number" value="500" name="filter-price-max"> ₽
+            <span class="visually-hidden">минимальная цена </span><input class="field-range-input" type="number" value="100" name="filter-price-min"> ₽ –
+            <span class="visually-hidden">максимальная цена </span><input class="field-range-input" type="number" value="500" name="filter-price-max"> ₽
           </legend>
           <div class="filter-group-inner">
             <div class="field-range-line"></div>
@@ -120,7 +120,7 @@
             </label>
           </div>
         </fieldset>
-        <button class="button filter-submit" type="submit">Применить</button>
+        <button class="button button-transparent filter-submit" type="submit">Применить</button>
       </form>
       <div class="catalog-list">
         <article class="product-card">
@@ -305,10 +305,10 @@
         </article>
       </div>
       <div class="catalog-actions">
-        <a class="button catalog-show-more" href="#">Показать еще</a>
+        <a class="button button-main catalog-show-more" href="#">Показать еще</a>
         <ul class="pagination catalog-pagination">
           <li class="pagination-item">
-            <a class="pagination-link pagination-link-start">
+            <a class="pagination-link pagination-link-disable pagination-link-start">
               <span class="visually-hidden">На предыдущую страницу</span>
             </a>
           </li>

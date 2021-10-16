@@ -41,14 +41,14 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="main-container">
       <h1 class="visually-hidden">Магазин мороженого Глэйси - Главная страница</h1>
       <section class="slider">
         <h2 class="visually-hidden">Новинки мороженого</h2>
         <ul class="slider-list">
           <li class="slider-item">
             <div class="slider-content">
-              <h3 class="slider-title">Нежный пломбир с клубничным джемом</h3>
+              <h3 class="slider-title">Нежный пломбир с&nbsp;клубничным джемом</h3>
               <p class="slider-description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
               <a href="#" class="button button-main">Заказать</a>
             </div>
@@ -64,7 +64,7 @@
           </li>
           <li class="slider-item">
             <div class="slider-content">
-              <h3 class="slider-title">Карамельный пломбир с маршмеллоу</h3>
+              <h3 class="slider-title">Карамельный пломбир с&nbsp;маршмеллоу</h3>
               <p class="slider-description">Необычный сладкий дессерт с карамельный топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
               <a href="#" class="button button-main">Заказать</a>
             </div>
@@ -94,20 +94,22 @@
       </section>
       <section class="promo">
         <h2 class="section-title promo-title">Заказывайте мороженое и получайте подарки!</h2>
-        <article class="promo-card promo-card-rasberry">
-          <h3 class="promo-card-title">Малинка даром!</h3>
-          <div class="promo-card-text">
-            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          </div>
-          <a class="button button-main promo-card-button" href="#" >Заказать</a>
-        </article>
-        <article class="promo-card promo-card-marshmallow">
-          <h3 class="promo-card-title">Маршмеллоу даром!</h3>
-          <div class="promo-card-text">
-            <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.</p>
-          </div>
-          <a class="button button-main promo-card-button" href="#">Заказать</a>
-        </article>
+        <div class="promo-list">
+          <article class="promo-card promo-card-rasberry">
+            <h3 class="promo-card-title">Малинка даром!</h3>
+            <div class="promo-card-text">
+              <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+            </div>
+            <a class="button button-main promo-card-button" href="#" >Заказать</a>
+          </article>
+          <article class="promo-card promo-card-marshmallow">
+            <h3 class="promo-card-title">Маршмеллоу даром!</h3>
+            <div class="promo-card-text">
+              <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.</p>
+            </div>
+            <a class="button button-main promo-card-button" href="#">Заказать</a>
+          </article>
+        </div>
       </section>
       <section class="product">
         <h2 class="section-title product-title">Попробуйте самые популярные вкусы нашего мороженого</h2>
@@ -185,26 +187,28 @@
           </ul>
         </div>
       </section>
-      <section class="blog-news">
-        <h2 class="visualli-hidden">Блог</h2>
-        <article class="news-card">
-          <h3 class="news-card-title">Новое в нашем блоге</h3>
-          <a class="news-card-link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
-        </article>
-      </section>
-      <section class="subscribe">
-        <div class="subscribe-inner">
-          <h2 class="visually-hidden">Подписка на рассылку</h2>
-          <p class="subscribe-description">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/">
-            <label class="form-field subscribe-input">
-              <span class="visually-hidden">Введите емейл</span>
-              <input class="form-field-input" type="email" name="subscribe-email" placeholder="email@example.com" required>
-            </label>
-            <button class="button button-additional subscribe-submit" type="submit">Отправить</button>
-          </form>
-        </div>
-      </section>
+      <div class="section-row">
+        <section class="blog-news">
+          <h2 class="visualli-hidden">Блог</h2>
+          <article class="news-card">
+            <h3 class="news-card-title">Новое в нашем блоге</h3>
+            <a class="news-card-link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+          </article>
+        </section>
+        <section class="subscribe">
+          <div class="subscribe-inner">
+            <h2 class="visually-hidden">Подписка на рассылку</h2>
+            <p class="subscribe-description">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+            <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/">
+              <label class="form-field subscribe-input">
+                <span class="visually-hidden">Введите емейл</span>
+                <input class="form-field-input" type="email" name="subscribe-email" placeholder="email@example.com" required>
+              </label>
+              <button class="button button-additional subscribe-submit" type="submit">Отправить</button>
+            </form>
+          </div>
+        </section>
+      </div>
       <section class="delivery">
         <div class="delivery-content">
           <h2 class="section-title delivery-title">Доставка любимого мороженого на дом</h2>
@@ -257,7 +261,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="main-footer">
       <section class="social footer-social">
         <h2 class="visually-hidden">Подписывайтесь на наши социальные сети</h2>
         <ul class="social-list">

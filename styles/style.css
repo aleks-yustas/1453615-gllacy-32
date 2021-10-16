@@ -20,13 +20,23 @@
   font-display: swap;
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: auto;
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+html *,
+html *::before,
+html *::after {
+  box-sizing: inherit;
 }
 
 .page-body {
+  min-height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
   font-family: "Inter", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -34,6 +44,12 @@ img {
   color: #565c66;
 
   background-color: #feafc3;
+}
+
+.main-container {
+  flex-grow: 1;
+  width: 1170px;
+  margin: 0 auto;
 }
 
 .button {
@@ -88,13 +104,31 @@ img {
   color: #b9b9b9;
 }
 
+.page-header {
+  width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.main-menu {
+  width: 400px;
+}
+
+.user-menu {
+  width: 420px;
+}
+
 .contact-phone {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  color: inherit;
-  text-decoration: none;
   color: #2d3440;
+  text-decoration: none;
 }
 
 .header-button {
@@ -112,6 +146,16 @@ img {
 
 .slider {
   color: #2d3440;
+}
+
+.slider-item {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 70px;
+}
+
+.slider-content {
+  width: 470px;
 }
 
 .slider-title {
@@ -133,6 +177,11 @@ img {
   color: #2d3440;
 }
 
+.promo-list {
+  display: flex;
+  justify-content: space-between;
+}
+
 .promo-title,
 .product-title,
 .about-title {
@@ -140,10 +189,14 @@ img {
 }
 
 .promo-card {
+  width: 570px;
+  padding: 40px 220px 40px 40px;
+  border-radius: 16px;
+
   color: #2d3440;
 
   background-color: #ff7799;
-  background-position: center center;
+  background-position: bottom right;
   background-repeat: no-repeat;
 }
 
@@ -170,6 +223,12 @@ img {
   vertical-align: middle;
   border-radius: 50%;
   overflow: hidden;
+}
+
+.product-card-image-link img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .product-card-title {
@@ -199,6 +258,7 @@ img {
 
 .about {
   padding: 24px;
+  border-radius: 16px;
 
   background-color: #ecdfc3;
   background-image: url("../img/bg-waffle.jpg");
@@ -208,10 +268,28 @@ img {
 }
 
 .about-inner {
+  border-radius: inherit;
+
   background-color: #fcfcfc;
 }
 
+.section-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-news {
+  width: 570px;
+  display: flex;
+  flex-direction: column;
+}
+
 .news-card {
+  width: 100%;
+  flex-grow: 1;
+  padding: 32px 235px 32px 32px;
+  border-radius: 16px;
+
   background-color: #fcfcfc;
   background-image: url("../img/bg-blog.jpg");
   background-position: center;
@@ -234,7 +312,9 @@ img {
 }
 
 .subscribe {
+  width: 570px;
   padding: 6px;
+  border-radius: 16px;
 
   background-image: url("../img/bg-subscrube.jpg");
   background-position: top left;
@@ -243,21 +323,46 @@ img {
 }
 
 .subscribe-inner {
+  height: 100%;
+  padding: 26px;
+  border-radius: inherit;
+
   background-color: #fcfcfc;
 }
 
 .delivery {
+  padding: 64px 64px 64px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+
   background-image: url("../img/bg-delivery.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.delivery-content {
+  width: 375px;
+}
+
 .delivery-inner {
+  width: 500px;
+  padding: 40px;
+  border-radius: 8px;
+
   background-color: #fcfcfc;
 }
 
 .contacts {
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 16px;
+
   background-image: url("../img/bg-contacts.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -265,6 +370,10 @@ img {
 }
 
 .contacts-card {
+  width: 343px;
+  padding: 40px;
+  border-radius: 8px;
+
   background-color: #fcfcfc;
 }
 
@@ -289,6 +398,25 @@ img {
 
 .social-link {
   color: #fcfcfc;
+}
+
+.main-footer {
+  width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-social {
+  width: 195px;
+}
+
+.footer-links {
+  width: 360px;
+}
+
+.creator {
+  width: 195px;
 }
 
 .footer-link {

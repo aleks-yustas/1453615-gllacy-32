@@ -226,7 +226,7 @@ html *::after {
 }
 
 .product-card-image-link img {
-  display: block;
+  vertical-align: middle;
   width: 100%;
   height: auto;
 }

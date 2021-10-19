@@ -26,9 +26,14 @@ html {
 }
 
 html *,
-html *::before,
-html *::after {
+html ::before,
+html ::after {
   box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .page-body {
@@ -169,7 +174,6 @@ html *::after {
   line-height: 24px;
 }
 
-.page-title,
 .section-title {
   font-weight: 900;
   font-size: 32px;
@@ -177,14 +181,12 @@ html *::after {
   color: #2d3440;
 }
 
-.promo-list {
+.promo-row {
   display: flex;
   justify-content: space-between;
 }
 
-.promo-title,
-.product-title,
-.about-title {
+.promo-title {
   text-align: center;
 }
 
@@ -214,34 +216,36 @@ html *::after {
   background-image: url("../img/bg-promo-marshmallow.png");
 }
 
+.product-title {
+  text-align: center;
+}
+
 .product-card {
   text-align: center;
 }
 
 .product-card-image-link {
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
+  width: 168px;
+  height: 168px;
   border-radius: 50%;
   overflow: hidden;
 }
 
 .product-card-image-link img {
-  vertical-align: middle;
-  width: 100%;
-  height: auto;
+  display: block;
 }
 
 .product-card-title {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  text-decoration: none;
   color: #2d3440;
 }
 
 .product-card-title a {
   color: inherit;
-  text-decoration: inherit;
+  text-decoration: none;
 }
 
 .product-card-price {
@@ -265,6 +269,10 @@ html *::after {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.about-title {
+  text-align: center;
 }
 
 .about-inner {

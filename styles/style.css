@@ -233,7 +233,7 @@ img {
 }
 
 .product-card-image-link img {
-  display: block;
+  vertical-align: middle;
 }
 
 .product-card-title {
@@ -452,6 +452,16 @@ img {
   color: inherit;
 }
 
+.breadcrumbs-list {
+  width: 300px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+
+  list-style: none;
+}
+
 .breadcrumbs-link {
   font-weight: 700;
   font-size: 14px;
@@ -461,6 +471,12 @@ img {
 
 .breadcrumbs-link[aria-current="page"] {
   text-decoration: none;
+}
+
+.filter-form {
+  max-width: 685px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .select-field {

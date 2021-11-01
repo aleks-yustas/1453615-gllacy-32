@@ -112,16 +112,25 @@ img {
 .page-header {
   width: 1170px;
   margin: 0 auto;
+}
+
+.header-inner {
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .main-nav {
+  min-width: 400px;
+  margin-right: 20px;
+  flex-grow: 1;
   display: flex;
+  justify-content: flex-start;
 }
 
-.main-menu {
-  width: 400px;
+.logo {
+  margin-right: 16px;
 }
 
 .user-menu {

@@ -112,11 +112,9 @@ img {
   color: #b9b9b9;
 }
 
-.header-inner {
-  width: 100%;
+.page-header {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .main-nav {

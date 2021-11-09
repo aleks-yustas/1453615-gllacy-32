@@ -13,13 +13,13 @@
         </a>
         <ul class="main-menu">
           <li class="menu-item">
-            <a href="catalog.html">Каталог</a>
+            <a class="menu-link" href="catalog.html">Каталог</a>
           </li>
           <li class="menu-item">
-            <a href="#">Доставка и оплата</a>
+            <a class="menu-link" href="#">Доставка и оплата</a>
           </li>
           <li class="menu-item">
-            <a href="#">Контакты</a>
+            <a class="menu-link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -27,17 +27,28 @@
         <a class="user-menu-item contact-phone" href="tel:+78005558628">+7 800 555-86-28</a>
         <div class="user-menu-item">
           <a class="header-button header-button-search" href="">
+            <svg aria-hidden="true" focusable="false" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M2.91 8.25a5.33 5.33 0 1 1 10.67 0 5.33 5.33 0 0 1-10.67 0Zm9.56 5.16a6.67 6.67 0 1 1 .94-.94l2.8 2.8a.67.67 0 0 1-.94.95l-2.8-2.81Z" clip-rule="evenodd"/>
+            </svg>
             <span class="visually-hidden">Открыть форму поиска</span>
           </a>
         </div>
         <div class="user-menu-item">
           <a class="header-button header-button-login" href="#">
+            <svg class="header-icon-login" aria-hidden="true" focusable="false" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.208 1.875c0-.368.299-.667.667-.667h3a2.167 2.167 0 0 1 2.167 2.167v10.5a2.167 2.167 0 0 1-2.167 2.167h-3a.667.667 0 0 1 0-1.334h3a.833.833 0 0 0 .833-.833v-10.5a.833.833 0 0 0-.833-.833h-3a.667.667 0 0 1-.667-.667ZM6.654 4.404c.26-.26.682-.26.942 0l3.746 3.745a.664.664 0 0 1 0 .952l-3.746 3.746a.667.667 0 0 1-.942-.943l2.612-2.612H1.875a.667.667 0 0 1 0-1.333h7.39l-2.61-2.613a.667.667 0 0 1 0-.943Z"/>
+            </svg>
             Вход
             <span class="visually-hidden"> в личный кабинет</span>
           </a>
         </div>
         <div class="user-menu-item">
-          <a class="header-button header-button-cart" href="#">Пусто</a>
+          <a class="header-button header-button-cart" href="#">
+            <svg class="header-icon-cart" aria-hidden="true" focusable="false" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.312 1.49a.667.667 0 0 0 0 1.333h2.061l.54 2.696a.659.659 0 0 0 .011.056l1.089 5.44a1.97 1.97 0 0 0 1.963 1.586h6.325a1.97 1.97 0 0 0 1.963-1.587l.001-.005 1.043-5.469a.667.667 0 0 0-.655-.791H5.12l-.545-2.724a.667.667 0 0 0-.654-.535H1.312Zm5.009 9.264-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.957a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.635 0 1.318 1.318 0 0 1-2.636 0Zm7.17 0a1.318 1.318 0 1 1 2.635 0 1.318 1.318 0 0 1-2.636 0Z"/>
+            </svg>
+            Пусто
+          </a>
         </div>
       </div>
     </header>
@@ -75,17 +86,17 @@
           <h2 class="visually-hidden">Подписывайтесь на наши социальные сети</h2>
           <ul class="social-list">
             <li class="social-item">
-              <a class="social-link" href="https://vk.com/htmlacademy" rel="noopener nofollow" target="_blank">
+              <a class="social-link social-link-vk" href="https://vk.com/htmlacademy" rel="noopener nofollow" target="_blank">
                 <span class="visually-hidden">Глейси во Вконтакте</span>
               </a>
             </li>
             <li class="social-item">
-              <a class="social-link" href="https://www.facebook.com/htmlacademy" rel="noopener nofollow" target="_blank">
+              <a class="social-link social-link-facebook" href="https://www.facebook.com/htmlacademy" rel="noopener nofollow" target="_blank">
                 <span class="visually-hidden">Глейси в Фейсбуке</span>
               </a>
             </li>
             <li class="social-item">
-              <a class="social-link" href="https://www.instagram.com/htmlacademy/" rel="noopener nofollow" target="_blank">
+              <a class="social-link social-link-instagram" href="https://www.instagram.com/htmlacademy/" rel="noopener nofollow" target="_blank">
                 <span class="visually-hidden">Глейси в Инстаграм</span>
               </a>
             </li>
@@ -142,6 +153,9 @@
             <div class="product-card-action">
               <b class="product-card-price">310 ₽/кг</b>
               <a class="button-cart" href="#">
+                <svg class="button-cart-icon" aria-hidden="true" focusable="false" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.312 1.49a.667.667 0 0 0 0 1.333h2.061l.54 2.696a.659.659 0 0 0 .011.056l1.089 5.44a1.97 1.97 0 0 0 1.963 1.586h6.325a1.97 1.97 0 0 0 1.963-1.587l.001-.005 1.043-5.469a.667.667 0 0 0-.655-.791H5.12l-.545-2.724a.667.667 0 0 0-.654-.535H1.312Zm5.009 9.264-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.957a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.635 0 1.318 1.318 0 0 1-2.636 0Zm7.17 0a1.318 1.318 0 1 1 2.635 0 1.318 1.318 0 0 1-2.636 0Z"/>
+                </svg>
                 <span class="visually-hidden">Добавить товар в корзину</span>
               </a>
             </div>
@@ -157,6 +171,9 @@
             <div class="product-card-action">
               <b class="product-card-price">340 ₽/кг</b>
               <a class="button-cart" href="#">
+                <svg class="button-cart-icon" aria-hidden="true" focusable="false" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.312 1.49a.667.667 0 0 0 0 1.333h2.061l.54 2.696a.659.659 0 0 0 .011.056l1.089 5.44a1.97 1.97 0 0 0 1.963 1.586h6.325a1.97 1.97 0 0 0 1.963-1.587l.001-.005 1.043-5.469a.667.667 0 0 0-.655-.791H5.12l-.545-2.724a.667.667 0 0 0-.654-.535H1.312Zm5.009 9.264-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.957a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.635 0 1.318 1.318 0 0 1-2.636 0Zm7.17 0a1.318 1.318 0 1 1 2.635 0 1.318 1.318 0 0 1-2.636 0Z"/>
+                </svg>
                 <span class="visually-hidden">Добавить товар в корзину</span>
               </a>
             </div>
@@ -172,6 +189,9 @@
             <div class="product-card-action">
               <b class="product-card-price">330 ₽/кг</b>
               <a class="button-cart" href="#">
+                <svg class="button-cart-icon" aria-hidden="true" focusable="false" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.312 1.49a.667.667 0 0 0 0 1.333h2.061l.54 2.696a.659.659 0 0 0 .011.056l1.089 5.44a1.97 1.97 0 0 0 1.963 1.586h6.325a1.97 1.97 0 0 0 1.963-1.587l.001-.005 1.043-5.469a.667.667 0 0 0-.655-.791H5.12l-.545-2.724a.667.667 0 0 0-.654-.535H1.312Zm5.009 9.264-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.957a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.635 0 1.318 1.318 0 0 1-2.636 0Zm7.17 0a1.318 1.318 0 1 1 2.635 0 1.318 1.318 0 0 1-2.636 0Z"/>
+                </svg>
                 <span class="visually-hidden">Добавить товар в корзину</span>
               </a>
             </div>
@@ -187,6 +207,9 @@
             <div class="product-card-action">
               <b class="product-card-price">320 ₽/кг</b>
               <a class="button-cart" href="#">
+                <svg class="button-cart-icon" aria-hidden="true" focusable="false" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.312 1.49a.667.667 0 0 0 0 1.333h2.061l.54 2.696a.659.659 0 0 0 .011.056l1.089 5.44a1.97 1.97 0 0 0 1.963 1.586h6.325a1.97 1.97 0 0 0 1.963-1.587l.001-.005 1.043-5.469a.667.667 0 0 0-.655-.791H5.12l-.545-2.724a.667.667 0 0 0-.654-.535H1.312Zm5.009 9.264-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.957a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.635 0 1.318 1.318 0 0 1-2.636 0Zm7.17 0a1.318 1.318 0 1 1 2.635 0 1.318 1.318 0 0 1-2.636 0Z"/>
+                </svg>
                 <span class="visually-hidden">Добавить товар в корзину</span>
               </a>
             </div>
@@ -237,7 +260,10 @@
             <div class="form-field delivery-form-date">
               <div class="form-field-title">
                 <label class="form-field-label" for="delivery-date">Дата</label>
-                <button class="form-field-prompt" type="button">
+                <button class="prompt-button form-field-prompt" type="button">
+                  <svg class="prompt-button-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+                    <path d="M7 2.125a4.875 4.875 0 1 0 0 9.75 4.875 4.875 0 0 0 0-9.75ZM.792 7a6.209 6.209 0 1 1 12.417 0A6.209 6.209 0 0 1 .792 7ZM7 6.333c.368 0 .667.299.667.667v2.217a.667.667 0 0 1-1.334 0V7c0-.368.299-.667.667-.667Zm0-2.216A.667.667 0 0 0 7 5.45h.006a.667.667 0 0 0 0-1.333H7Z"/>
+                  </svg>
                   <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                 </button>
               </div>
@@ -252,7 +278,10 @@
             <div class="form-field delivery-form-address">
               <div class="form-field-title">
                 <label class="form-field-label" for="delivery-date">Адрес</label>
-                <button class="form-field-prompt" type="button">
+                <button class="prompt-button form-field-prompt" type="button">
+                  <svg class="prompt-button-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+                    <path d="M7 2.125a4.875 4.875 0 1 0 0 9.75 4.875 4.875 0 0 0 0-9.75ZM.792 7a6.209 6.209 0 1 1 12.417 0A6.209 6.209 0 0 1 .792 7ZM7 6.333c.368 0 .667.299.667.667v2.217a.667.667 0 0 1-1.334 0V7c0-.368.299-.667.667-.667Zm0-2.216A.667.667 0 0 0 7 5.45h.006a.667.667 0 0 0 0-1.333H7Z"/>
+                  </svg>
                   <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                 </button>
               </div>
@@ -283,17 +312,17 @@
         <h2 class="visually-hidden">Подписывайтесь на наши социальные сети</h2>
         <ul class="social-list">
           <li class="social-item">
-            <a class="social-link" href="https://vk.com/htmlacademy" rel="noopener nofollow" target="_blank">
+            <a class="social-link social-link-vk" href="https://vk.com/htmlacademy" rel="noopener nofollow" target="_blank">
               <span class="visually-hidden">Глейси во Вконтакте</span>
             </a>
           </li>
           <li class="social-item">
-            <a class="social-link" href="https://www.facebook.com/htmlacademy" rel="noopener nofollow" target="_blank">
+            <a class="social-link social-link-facebook" href="https://www.facebook.com/htmlacademy" rel="noopener nofollow" target="_blank">
               <span class="visually-hidden">Глейси в Фейсбуке</span>
             </a>
           </li>
           <li class="social-item">
-            <a class="social-link" href="https://www.instagram.com/htmlacademy/" rel="noopener nofollow" target="_blank">
+            <a class="social-link social-link-instagram" href="https://www.instagram.com/htmlacademy/" rel="noopener nofollow" target="_blank">
               <span class="visually-hidden">Глейси в Инстаграм</span>
             </a>
           </li>

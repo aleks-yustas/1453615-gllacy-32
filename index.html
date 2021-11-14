@@ -4,7 +4,10 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси - онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="152x152" href="img/favicon-152.png">
   </head>
+  <!-- Для изменения фонового цвета страницы используются классы: "page-body-pink", "page-body-blue", "page-body-yellow" -->
   <body class="page-body page-body-pink">
     <header class="page-header container">
       <nav class="main-nav">
@@ -13,8 +16,11 @@
         </a>
         <ul class="main-menu">
           <li class="menu-item">
+            <!-- Для ссылки с открытым подменю используется класс "menu-link-active" -->
+            <!-- Для ссылки с текущей страницей используется класс "menu-link-current" -->
             <a class="menu-link" href="catalog.html">Каталог</a>
-            <ul class="submenu submenu-hidden">
+            <!-- Для отображения подменю используется класс "submenu-visible" -->
+            <ul class="submenu">
               <li class="submenu-item submenu-item-top">
                 <a class="submenu-link submenu-link-top" href="#">Новинки</a>
               </li>
@@ -22,6 +28,7 @@
                 <a class="submenu-link" href="#">Сливочное</a>
               </li>
               <li class="submenu-item">
+                <!-- Для отображения текущей страницы используется класс "submenu-link-current" -->
                 <a class="submenu-link" href="#">Щербеты</a>
               </li>
               <li class="submenu-item">
@@ -49,12 +56,16 @@
             </svg>
             <span class="visually-hidden">Открыть форму поиска</span>
           </a>
-          <div class="popover popover-hidden search-popover">
+          <!--  Для отображения поповера используется класс "popover-visible" -->
+          <div class="popover search-popover">
             <form class="search-form" method="post" action="https://echo.htmlacademy.ru/">
-              <label class="form-field search-input">
-                <span class="visually-hidden">Введите поисковый запрос</span>
-                <input class="form-field-input" type="search" name="search-querry" placeholder="Поиск по сайту" required>
-              </label>
+              <div class="form-field search-input">
+                <label class="visually-hidden" for="search-field">Введите поисковый запрос</label>
+                <input class="form-field-input" type="search"id="search-field" name="search-querry" placeholder="Поиск по сайту" required>
+                <button class="button search-reset" type="reset">
+                  <span class="visually-hidden">Очистить поле поиска</span>
+                </button>
+              </div>
               <button class="visually-hidden" type="submit">Отправить</button>
             </form>
           </div>
@@ -67,7 +78,8 @@
             Вход
             <span class="visually-hidden"> в личный кабинет</span>
           </a>
-          <div class="popover popover-hidden login-popover">
+          <!--  Для отображения поповера используется класс "popover-visible" -->
+          <div class="popover login-popover">
             <div class="login-inner">
               <h2 class="login-title">Личный кабинет</h2>
               <form class="login-form" method="post" action="https://echo.htmlacademy.ru/">
@@ -95,6 +107,10 @@
             </svg>
             Пусто
           </a>
+          <!--  Для отображения поповера используется класс "popover-visible" -->
+          <div class="popover cart-popover">
+            <h2 class="cart-popover-title cart-popover-title-empty">Ваша корзина пока пуста</h2>
+          </div>
         </div>
       </div>
     </header>
@@ -103,30 +119,33 @@
       <section class="slider">
         <h2 class="visually-hidden">Новинки мороженого</h2>
         <ul class="slider-list">
-          <li class="slider-item active">
+          <!-- Для активного слайда необходимо добавить класс "slider-item-active" -->
+          <!-- Для следующего слайда (превью изображения посередине) необходимо добавить класс "slider-item-next" -->
+          <!-- Для следующего слайда (превью изображения справа) необходимо добавить класс "slider-item-previous" -->
+          <li class="slider-item slider-item-active">
             <div class="slider-content">
               <h3 class="slider-title">Нежный пломбир с&nbsp;клубничным джемом</h3>
-              <p class="slider-description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
+              <p class="slider-description">Натуральное мороженое из свежих сливок и&nbsp;молока с вкуснейшим клубничным джемом<br>&#8211;&nbsp;это&nbsp;идеальный десерт для всей семьи.</p>
               <a href="#" class="button button-main">Заказать</a>
             </div>
             <div class="slider-image">
               <img src="img/slider/slider-1.png" width="306" height="507" alt="Пломбир с клубничным джемом.">
             </div>
           </li>
-          <li class="slider-item">
+          <li class="slider-item slider-item-next">
             <div class="slider-content">
               <h3 class="slider-title">Сливочное мороженое со вкусом банана</h3>
-              <p class="slider-description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
+              <p class="slider-description">Сливочное мороженое с&nbsp;ярким банановым вкусом подарит вам свежесть и&nbsp;наслаждение даже в&nbsp;самый жаркий летний день.</p>
               <a href="#" class="button button-main">Заказать</a>
             </div>
             <div class="slider-image">
               <img src="img/slider/slider-2.png" width="306" height="507" alt="Сливочное мороженое со вкусом банана.">
             </div>
           </li>
-          <li class="slider-item">
+          <li class="slider-item slider-item-previous">
             <div class="slider-content">
               <h3 class="slider-title">Карамельный пломбир с&nbsp;маршмеллоу</h3>
-              <p class="slider-description">Необычный сладкий дессерт с карамельный топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
+              <p class="slider-description">Необычный сладкий дессерт с&nbsp;карамельный топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
               <a href="#" class="button button-main">Заказать</a>
             </div>
             <div class="slider-image">
@@ -134,8 +153,23 @@
             </div>
           </li>
         </ul>
+        <div class="slider-buttons">
+          <button class="button slider-button slider-button-left">
+            <span class="visually-hidden">Предыдущий слайд</span>
+            <svg class="slider-button-icon" aria-hidden="true" focusable="false" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002a.664.664 0 0 0 0-.94L7.135 2.864Z"/>
+            </svg>
+          </button>
+          <button class="button slider-button slider-button-right">
+            <span class="visually-hidden">Следующий слайд</span>
+            <svg class="slider-button-icon" aria-hidden="true" focusable="false" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002a.664.664 0 0 0 0-.94L7.135 2.864Z"/>
+            </svg>
+          </button>
+        </div>
         <ul class="toggler">
-          <li class="toggler-item active">
+          <!-- Для активного переключателя необходимо добавить класс "toggler-button-active" -->
+          <li class="toggler-item">
             <button class="toggler-button toggler-button-active">
               <span class="visually-hidden">Слайд 1</span>
             </button>
@@ -180,6 +214,8 @@
             <div class="promo-card-text">
               <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
             </div>
+            <!-- Для недоступной кнопки используется класс "button-main-disabled" -->
+            <!-- Для кнопки со спиннером используется класс "button-spinner" -->
             <a class="button button-main button-main-spinner promo-card-button" href="#">Заказать</a>
           </article>
           <article class="promo-card promo-card-marshmallow">
@@ -204,6 +240,7 @@
             <p class="product-card-text">Сливочное мороженое с&nbsp;малиновым джемом</p>
             <div class="product-card-action">
               <b class="product-card-price">310 ₽/кг</b>
+              <!-- Для недоступной кнопки используется класс "button-cart-disabled" -->
               <a class="button-cart" href="#">
                 <svg class="button-cart-icon" aria-hidden="true" focusable="false" width="18" height="18" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1.312 1.49a.667.667 0 0 0 0 1.333h2.061l.54 2.696a.659.659 0 0 0 .011.056l1.089 5.44a1.97 1.97 0 0 0 1.963 1.586h6.325a1.97 1.97 0 0 0 1.963-1.587l.001-.005 1.043-5.469a.667.667 0 0 0-.655-.791H5.12l-.545-2.724a.667.667 0 0 0-.654-.535H1.312Zm5.009 9.264-.935-4.672h9.462l-.892 4.675a.637.637 0 0 1-.636.51H6.957a.637.637 0 0 1-.637-.512v-.001Zm-1.11 4.44a1.318 1.318 0 1 1 2.635 0 1.318 1.318 0 0 1-2.636 0Zm7.17 0a1.318 1.318 0 1 1 2.635 0 1.318 1.318 0 0 1-2.636 0Z"/>
@@ -294,9 +331,13 @@
             <form class="subscribe-form" method="post" action="https://echo.htmlacademy.ru/">
               <label class="form-field subscribe-input">
                 <span class="visually-hidden">Введите емейл</span>
+                <!-- Для отображения поля с ошибкой используется класс "form-field-input-invalid" -->
+                <!-- Для отображения недоступного поля используется атрибут "disabled" -->
                 <input class="form-field-input" type="email" name="subscribe-email" placeholder="email@example.com" required>
               </label>
-              <button class="button button-additional subscribe-submit" type="submit">Отправить</button>
+            <!-- Для недоступной кнопки используется класс "button-additional-disabled" -->
+            <!-- Для кнопки со спиннером используется класс "button-spinner" -->
+            <button class="button button-additional subscribe-submit" type="submit">Отправить</button>
             </form>
           </div>
         </section>
@@ -312,12 +353,15 @@
             <div class="form-field delivery-form-date">
               <div class="form-field-title">
                 <label class="form-field-label" for="delivery-date">Дата</label>
-                <button class="prompt-button form-field-prompt" type="button">
-                  <svg class="prompt-button-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
-                    <path d="M7 2.125a4.875 4.875 0 1 0 0 9.75 4.875 4.875 0 0 0 0-9.75ZM.792 7a6.209 6.209 0 1 1 12.417 0A6.209 6.209 0 0 1 .792 7ZM7 6.333c.368 0 .667.299.667.667v2.217a.667.667 0 0 1-1.334 0V7c0-.368.299-.667.667-.667Zm0-2.216A.667.667 0 0 0 7 5.45h.006a.667.667 0 0 0 0-1.333H7Z"/>
-                  </svg>
-                  <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                </button>
+                <div class="tooltip">
+                  <button class="tooltip-button form-field-prompt" type="button">
+                    <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+                      <path d="M7 2.125a4.875 4.875 0 1 0 0 9.75 4.875 4.875 0 0 0 0-9.75ZM.792 7a6.209 6.209 0 1 1 12.417 0A6.209 6.209 0 0 1 .792 7ZM7 6.333c.368 0 .667.299.667.667v2.217a.667.667 0 0 1-1.334 0V7c0-.368.299-.667.667-.667Zm0-2.216A.667.667 0 0 0 7 5.45h.006a.667.667 0 0 0 0-1.333H7Z"/>
+                    </svg>
+                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                  </button>
+                  <p class="tooltip-text">Введите дату в формате ДД.ММ.ГГГГ</p>
+                </div>
               </div>
               <input class="form-field-input" type="text" id="delivery-date" name="delivery-date" placeholder="01.04.2020" required>
             </div>
@@ -330,12 +374,15 @@
             <div class="form-field delivery-form-address">
               <div class="form-field-title">
                 <label class="form-field-label" for="delivery-date">Адрес</label>
-                <button class="prompt-button form-field-prompt" type="button">
-                  <svg class="prompt-button-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
-                    <path d="M7 2.125a4.875 4.875 0 1 0 0 9.75 4.875 4.875 0 0 0 0-9.75ZM.792 7a6.209 6.209 0 1 1 12.417 0A6.209 6.209 0 0 1 .792 7ZM7 6.333c.368 0 .667.299.667.667v2.217a.667.667 0 0 1-1.334 0V7c0-.368.299-.667.667-.667Zm0-2.216A.667.667 0 0 0 7 5.45h.006a.667.667 0 0 0 0-1.333H7Z"/>
-                  </svg>
-                  <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                </button>
+                <div class="tooltip">
+                  <button class="tooltip-button form-field-prompt" type="button">
+                    <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+                      <path d="M7 2.125a4.875 4.875 0 1 0 0 9.75 4.875 4.875 0 0 0 0-9.75ZM.792 7a6.209 6.209 0 1 1 12.417 0A6.209 6.209 0 0 1 .792 7ZM7 6.333c.368 0 .667.299.667.667v2.217a.667.667 0 0 1-1.334 0V7c0-.368.299-.667.667-.667Zm0-2.216A.667.667 0 0 0 7 5.45h.006a.667.667 0 0 0 0-1.333H7Z"/>
+                    </svg>
+                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                  </button>
+                  <p class="tooltip-text">Введите название улицы, дома и&nbsp;квартиры</p>
+                </div>
               </div>
               <input class="form-field-input" type="text" id="delivery-address" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8" required>
             </div>
@@ -393,5 +440,31 @@
         <p class="creator-text">Сделано в <a class="creator-link" href="https://htmlacademy.ru/" rel="noopener nofollow" target="_blank">.html academy</a> © 2021</p>
       </div>
     </footer>
+    <!-- Для скрытия формы применяется класс "popup-hidden" -->
+    <div class="popup popup-hidden">
+      <div class="popup-inner">
+        <div class="popup-content feedback">
+          <h3 class="feedback-title">Мы обязательно ответим вам!</h3>
+          <form class="feedback-form" method="post" action="https://echo.htmlacademy.ru/">
+            <label class="form-field">
+              <span class="visually-hidden">Введите имя и фамилию</span>
+              <input class="form-field-input" type="text" name="feedback-name" placeholder="Имя и фамилия" required>
+            </label>
+            <label class="form-field">
+              <span class="visually-hidden">Введите адрес электронной почты</span>
+              <input class="form-field-input" type="email" name="feedback-email" placeholder="example@example.com" required>
+            </label>
+            <label class="form-field">
+              <span class="visually-hidden">Введите сообщение </span>
+              <textarea class="form-field-input form-field-textarea" name="feedback-text" placeholder="В свободной форме"></textarea>
+            </label>
+            <button class="button button-additional feedback-submit" type="submit">Отправить</button>
+          </form>
+        </div>
+        <button class="button popup-close" type="button">
+          <span class="visually-hidden">Закрыть всплывающее окно</span>
+        </button>
+      </div>
+    </div>
   </body>
 </html>

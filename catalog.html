@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси - онлайн и офлайн-магазин по продаже мороженого собственного проиводства на развес</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="152x152" href="img/favicon-152.png">
   </head>
   <body class="page-body page-body-pink">
     <header class="page-header container">
@@ -13,7 +15,28 @@
         </a>
         <ul class="main-menu">
           <li class="menu-item">
-            <a class="menu-link menu-link-active" href="catalog.html">Каталог</a>
+            <!-- Для ссылки с открытым подменю используется класс "menu-link-active" -->
+            <!-- Для ссылки с текущей страницей используется класс "menu-link-current" -->
+            <a class="menu-link" href="catalog.html">Каталог</a>
+            <!-- Для отображения подменю используется класс "submenu-visible" -->
+            <ul class="submenu">
+              <li class="submenu-item submenu-item-top">
+                <a class="submenu-link submenu-link-top" href="#">Новинки</a>
+              </li>
+              <li class="submenu-item">
+                <a class="submenu-link" href="#">Сливочное</a>
+              </li>
+              <li class="submenu-item">
+                <!-- Для отображения текущей страницы используется класс "submenu-link-current" -->
+                <a class="submenu-link submenu-link-current" href="#">Щербеты</a>
+              </li>
+              <li class="submenu-item">
+                <a class="submenu-link" href="#">Фруктовый лед</a>
+              </li>
+              <li class="submenu-item">
+                <a class="submenu-link" href="#">Мелорин</a>
+              </li>
+            </ul>
           </li>
           <li class="menu-item">
             <a class="menu-link" href="#">Доставка и оплата</a>
@@ -32,6 +55,19 @@
             </svg>
             <span class="visually-hidden">Открыть форму поиска</span>
           </a>
+          <!--  Для отображения поповера используется класс "popover-visible" -->
+          <div class="popover search-popover">
+            <form class="search-form" method="post" action="https://echo.htmlacademy.ru/">
+              <div class="form-field search-input">
+                <label class="visually-hidden" for="search-field">Введите поисковый запрос</label>
+                <input class="form-field-input" type="search"id="search-field" name="search-querry" placeholder="Поиск по сайту" required>
+                <button class="button search-reset" type="reset">
+                  <span class="visually-hidden">Очистить поле поиска</span>
+                </button>
+              </div>
+              <button class="visually-hidden" type="submit">Отправить</button>
+            </form>
+          </div>
         </div>
         <div class="user-menu-item">
           <a class="header-button header-button-login" href="#">
@@ -41,6 +77,27 @@
             Вход
             <span class="visually-hidden"> в личный кабинет</span>
           </a>
+          <!--  Для отображения поповера используется класс "popover-visible" -->
+          <div class="popover login-popover">
+            <div class="login-inner">
+              <h2 class="login-title">Личный кабинет</h2>
+              <form class="login-form" method="post" action="https://echo.htmlacademy.ru/">
+                <label class="form-field login-input">
+                  <span class="visually-hidden">Введите электронную почту</span>
+                  <input class="form-field-input" type="email" name="login-email" placeholder="example@example.com" required>
+                </label>
+                <label class="form-field login-input">
+                  <span class="visually-hidden">Введите пароль</span>
+                  <input class="form-field-input" type="password" name="login-password" placeholder="&#183; &#183; &#183; &#183; &#183;" required>
+                </label>
+                <button class="button button-additional" type="submit">Войти</button>
+                <div class="login-links">
+                  <a class="login-link" href="#">Забыли пароль?</a>
+                  <a class="login-link" href="#">Регистрация</a>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
         <div class="user-menu-item">
           <a class="header-button header-button-cart" href="#">
@@ -49,6 +106,37 @@
             </svg>
             2 товара
           </a>
+          <div class="popover cart-popover">
+            <h2 class="cart-popover-title">Корзина</h2>
+            <ul class="cart-popover-items">
+              <li class="cart-item">
+                <div class="cart-item-image">
+                  <img src="img/catalog/icecream-raspberries.jpg" width="46" height="46" alt="">
+                </div>
+                <h3 class="cart-item-title">
+                  <a class="cart-item-link" href="#">Малинка</a>
+                </h3>
+                <p class="cart-item-price">1&nbsp;кг х 310&nbsp;₽</p>
+                <b class="cart-item-total-price">310 ₽</b>
+                <button class="button cart-item-remove"><span class="visually-hidden">Удалить товар из корзины</span></button>
+              </li>
+              <li class="cart-item">
+                <div class="cart-item-image">
+                  <img src="img/catalog/icecream-bubblegum.jpg" width="46" height="46" alt="">
+                </div>
+                <h3 class="cart-item-title">
+                  <a class="cart-item-link" href="#">Бабл-гам</a>
+                </h3>
+                <p class="cart-item-price">1,5&nbsp;кг х 320&nbsp;₽</p>
+                <b class="cart-item-total-price">480 ₽</b>
+                <button class="button cart-item-remove"><span class="visually-hidden">Удалить товар из корзины</span></button>
+              </li>
+            </ul>
+            <div class="cart-popover-bottom">
+              <button class="button button-additional cart-popover-submit" type="button">Отправить</button>
+              <b class="cart-popover-sum">Итого: 790&nbsp;₽</b>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -81,10 +169,16 @@
             <span class="visually-hidden">максимальная цена </span><input class="field-range-input" type="number" value="500" name="filter-price-max"> ₽
           </legend>
           <div class="filter-group-inner range-input">
-            <div class="range-input-line"></div>
-            <div class="range-input-fill"></div>
-            <div class="range-input-min"></div>
-            <div class="range-input-max"></div>
+            <div class="range-input-line">
+              <div class="range-input-fill" style="left: 32px; width: 72px">
+                <button class="button range-toggle range-toggle-min" type="button">
+                  <span class="visually-hidden">Изменить минимальную цену.</span>
+                </button>
+                <button class="button range-toggle range-toggle-max" type="button">
+                  <span class="visually-hidden">Изменить максимальную цену.</span>
+                </button>
+              </div>
+            </div>
           </div>
         </fieldset>
         <fieldset class="filter-group filter-fat">
@@ -403,7 +497,7 @@
         </div>
       </section>
     </main>
-    <footer class="main-footer container">
+    <footer class="main-footer main-footer-line container">
       <section class="social footer-social">
         <h2 class="visually-hidden">Подписывайтесь на наши социальные сети</h2>
         <ul class="social-list">

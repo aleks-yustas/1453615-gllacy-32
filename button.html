@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus</title>
+  <style>
+    @font-face {
+      font-family: "Inter";
+      font-weight: 700;
+      src: url("fonts/inter-700.woff2") format("woff2");
+      font-display: swap;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+
+      font-family: "Inter", "Arial", sans-serif;
+    }
+
+    .button {
+      border: none;
+      box-sizing: border-box;
+
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      text-decoration: none;
+      text-align: center;
+
+      cursor: pointer;
+      outline: none;
+
+      transform: scale(5);
+    }
+
+    .button::-moz-focus-inner,
+    .button[type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+
+    .button:-moz-focusring,
+    .button[type="submit"]:-moz-focusring {
+      outline: none;
+    }
+
+    .button-additional {
+      min-height: 44px;
+      padding: 12px 32px;
+      border-radius: 26px;
+
+      color: #fcfcfc;
+
+      background-color: #ff2f64;
+      box-shadow:
+        0px 4px 12px rgba(45, 52, 64, 0.1),
+        0 0 0 4px rgba(255, 47, 100, 0.3);
+      }
+
+      .button-additional:hover {
+        color: #2d3440;
+        background-color: rgba(252, 252, 252, 0.3);
+        box-shadow: 0 0 0 4px #ff2f64;
+      }
+
+      .button-additional:focus {
+        color: #fcfcfc;
+
+        background-color: #ff2f64;
+        box-shadow: 0 0 0 2px #2d3440;
+      }
+
+      @supports selector(:focus-visible) {
+        .button-additional:focus {
+          box-shadow:
+            0px 4px 12px rgba(45, 52, 64, 0.1),
+            0 0 0 4px rgba(255, 47, 100, 0.3);
+
+          outline: none;
+        }
+
+        .button-additional:focus-visible {
+          color: #fcfcfc;
+
+          background-color: #ff2f64;
+          box-shadow: 0 0 0 2px #2d3440;
+        }
+      }
+
+      .button.button-additional:active {
+        box-shadow: 0 0 0 2px #ff2f64;
+      }
+  </style>
+</head>
+<body>
+  <button class="button button-additional" type="submit">Отправить</button>
+  <button class="button button-additional" type="submit">Отправить</button>
+</body>
+</html>

@@ -161,12 +161,12 @@
             <option value="sort-popular">по популярности</option>
           </select>
         </label>
-        <div class="filter-group filter-price-range range-field" role="group" aria-labelledby="filter-price-lable">
-          <div class="filter-group-caption" id="filter-price-lable">
+        <fieldset class="filter-group filter-price-range range-field">
+          <legend class="filter-group-caption">
             Цена:
             <span class="visually-hidden">минимальная цена </span><input class="field-range-input" type="number" value="100" name="filter-price-min"> ₽ –
             <span class="visually-hidden">максимальная цена </span><input class="field-range-input" type="number" value="500" name="filter-price-max"> ₽
-          </div>
+          </legend>
           <div class="filter-group-inner range-input">
             <div class="range-input-line">
               <!-- Положение ползунков определяется положением ползунка с минимальной ценой и расстоянием между ползунками -->
@@ -180,9 +180,9 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="filter-group filter-fat" role="group" aria-labelledby="filter-fat-lable">
-          <div class="filter-group-caption" id="filter-fat-lable">Жирность:</div>
+        </fieldset>
+        <fieldset class="filter-group filter-fat">
+          <legend class="filter-group-caption">Жирность:</legend>
           <div class="filter-group-inner">
             <label class="radio filter-radio">
               <input class="radio-input" type="radio" name="filter-fat" value="0">
@@ -201,9 +201,9 @@
               <span class="radio-label">выше 30%</span>
             </label>
           </div>
-        </div>
-        <div class="filter-group filter-filler" role="group" aria-labelledby="filter-filler-lable">
-          <div class="filter-group-caption" id="filter-filler-lable">Наполнители:</div>
+        </fieldset>
+        <fieldset class="filter-group filter-filler">
+          <legend class="filter-group-caption">Наполнители:</legend>
           <div class="filter-group-inner">
             <label class="checkbox filter-checkbox">
               <input class="checkbox-input" type="checkbox" name="filter-filler" value="chocolate" checked>
@@ -226,13 +226,13 @@
               <span class="checkbox-label">джемы</span>
             </label>
           </div>
-        </div>
+        </fieldset>
         <!-- Для недоступной кнопки используется класс "button-disabled" -->
         <button class="button button-transparent filter-submit" type="submit">Применить</button>
       </form>
       <section class="catalog catalog-inner">
         <h2 class="visually-hidden">Каталог сливочного мороженого</h2>
-        <div class="product-list catalog-list">
+        <div class="product-list">
           <article class="product-card">
             <a class="product-card-image-link" href="#">
               <img src="img/catalog/icecream-raspberries.jpg" width="168" height="168" alt="">

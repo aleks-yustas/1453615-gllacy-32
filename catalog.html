@@ -57,7 +57,7 @@
           </a>
           <!--  Для отображения поповера используется класс "popover-visible" -->
           <div class="popover search-popover">
-            <form class="search-form" method="post" action="https://echo.htmlacademy.ru/">
+            <form class="search-form" method="get" action="https://echo.htmlacademy.ru/">
               <div class="form-field search-input">
                 <label class="visually-hidden" for="search-field">Введите поисковый запрос</label>
                 <input class="form-field-input" type="search" id="search-field" name="search-querry" placeholder="Поиск по сайту" required>
@@ -79,24 +79,22 @@
           </a>
           <!--  Для отображения поповера используется класс "popover-visible" -->
           <div class="popover login-popover">
-            <div class="login-inner">
-              <h3 class="login-title">Личный кабинет</h3>
-              <form class="login-form" method="post" action="https://echo.htmlacademy.ru/">
-                <label class="form-field login-input">
-                  <span class="visually-hidden">Введите электронную почту</span>
-                  <input class="form-field-input" type="email" name="login-email" placeholder="email@example.com" required>
-                </label>
-                <label class="form-field login-input">
-                  <span class="visually-hidden">Введите пароль</span>
-                  <input class="form-field-input" type="password" name="login-password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;" required>
-                </label>
-                <button class="button button-additional" type="submit">Войти</button>
-                <div class="login-links">
-                  <a class="login-link" href="#">Забыли пароль?</a>
-                  <a class="login-link" href="#">Регистрация</a>
-                </div>
-              </form>
-            </div>
+            <h3 class="login-title">Личный кабинет</h3>
+            <form class="login-form" method="post" action="https://echo.htmlacademy.ru/">
+              <label class="form-field login-input">
+                <span class="visually-hidden">Введите электронную почту</span>
+                <input class="form-field-input" type="email" name="login-email" placeholder="email@example.com" required>
+              </label>
+              <label class="form-field login-input">
+                <span class="visually-hidden">Введите пароль</span>
+                <input class="form-field-input" type="password" name="login-password" placeholder="••••••" required>
+              </label>
+              <button class="button button-additional" type="submit">Войти</button>
+              <div class="login-links">
+                <a class="login-link" href="#">Забыли пароль?</a>
+                <a class="login-link" href="#">Регистрация</a>
+              </div>
+            </form>
           </div>
         </div>
         <div class="user-menu-item">
@@ -163,12 +161,12 @@
             <option value="sort-popular">по популярности</option>
           </select>
         </label>
-        <fieldset class="filter-group filter-price-range range-field">
-          <legend class="filter-group-caption">
+        <div class="filter-group filter-price-range range-field" role="group" aria-labelledby="filter-price-lable">
+          <div class="filter-group-caption" id="filter-price-lable">
             Цена:
             <span class="visually-hidden">минимальная цена </span><input class="field-range-input" type="number" value="100" name="filter-price-min"> ₽ –
             <span class="visually-hidden">максимальная цена </span><input class="field-range-input" type="number" value="500" name="filter-price-max"> ₽
-          </legend>
+          </div>
           <div class="filter-group-inner range-input">
             <div class="range-input-line">
               <!-- Положение ползунков определяется положением ползунка с минимальной ценой и расстоянием между ползунками -->
@@ -182,9 +180,9 @@
               </div>
             </div>
           </div>
-        </fieldset>
-        <fieldset class="filter-group filter-fat">
-          <legend class="filter-group-caption">Жирность:</legend>
+        </div>
+        <div class="filter-group filter-fat" role="group" aria-labelledby="filter-fat-lable">
+          <div class="filter-group-caption" id="filter-fat-lable">Жирность:</div>
           <div class="filter-group-inner">
             <label class="radio filter-radio">
               <input class="radio-input" type="radio" name="filter-fat" value="0">
@@ -203,9 +201,9 @@
               <span class="radio-label">выше 30%</span>
             </label>
           </div>
-        </fieldset>
-        <fieldset class="filter-group filter-filler">
-          <legend class="filter-group-caption">Наполнители:</legend>
+        </div>
+        <div class="filter-group filter-filler" role="group" aria-labelledby="filter-filler-lable">
+          <div class="filter-group-caption" id="filter-filler-lable">Наполнители:</div>
           <div class="filter-group-inner">
             <label class="checkbox filter-checkbox">
               <input class="checkbox-input" type="checkbox" name="filter-filler" value="chocolate" checked>
@@ -228,7 +226,8 @@
               <span class="checkbox-label">джемы</span>
             </label>
           </div>
-        </fieldset>
+        </div>
+        <!-- Для недоступной кнопки используется класс "button-disabled" -->
         <button class="button button-transparent filter-submit" type="submit">Применить</button>
       </form>
       <section class="catalog catalog-inner">
@@ -293,7 +292,7 @@
               <img src="img/catalog/icecream-bubblegum.jpg" width="168" height="168" alt="">
             </a>
             <h3 class="product-card-title">
-              <a href="">Бабл-гам</a>
+              <a href="#">Бабл-гам</a>
             </h3>
             <p class="product-card-text">Ванильный пломбир со&nbsp;сладкой посыпкой</p>
             <div class="product-card-action">
@@ -311,7 +310,7 @@
               <img src="img/catalog/icecream-blackberry.jpg" width="168" height="168" alt="">
             </a>
             <h3 class="product-card-title">
-              <a href="">Ежевика</a>
+              <a href="#">Ежевика</a>
             </h3>
             <p class="product-card-text">Сливочное мороженое с&nbsp;ежевичным джемом</p>
             <div class="product-card-action">
@@ -329,7 +328,7 @@
               <img src="img/catalog/icecream-banana.jpg" width="168" height="168" alt="">
             </a>
             <h3 class="product-card-title">
-              <a href="">Банан</a>
+              <a href="#">Банан</a>
             </h3>
             <p class="product-card-text">Сливочный пломбир с&nbsp;банановым вкусом</p>
             <div class="product-card-action">
@@ -347,7 +346,7 @@
               <img src="img/catalog/icecream-chocolate.jpg" width="168" height="168" alt="">
             </a>
             <h3 class="product-card-title">
-              <a href="">Шоколадка</a>
+              <a href="#">Шоколадка</a>
             </h3>
             <p class="product-card-text">Классический шоколадный пломбир</p>
             <div class="product-card-action">
@@ -365,7 +364,7 @@
               <img src="img/catalog/icecream-strawberry.jpg" width="168" height="168" alt="">
             </a>
             <h3 class="product-card-title">
-              <a href="">Клубничка</a>
+              <a href="#">Клубничка</a>
             </h3>
             <p class="product-card-text">Сливочный пломбир с&nbsp;клубничным вкусом</p>
             <div class="product-card-action">
@@ -383,7 +382,7 @@
               <img src="img/catalog/icecream-lemon.jpg" width="168" height="168" alt="">
             </a>
             <h3 class="product-card-title">
-              <a href="">Лимон</a>
+              <a href="#">Лимон</a>
             </h3>
             <p class="product-card-text">Освежающий лимонный сорбет</p>
             <div class="product-card-action">
@@ -401,7 +400,7 @@
               <img src="img/catalog/icecream-menthol.jpg" width="168" height="168" alt="">
             </a>
             <h3 class="product-card-title">
-              <a href="">Ментол</a>
+              <a href="#">Ментол</a>
             </h3>
             <p class="product-card-text">Сливочный пломбир с&nbsp;ментоловым сиропом</p>
             <div class="product-card-action">
@@ -419,7 +418,7 @@
               <img src="img/catalog/icecream-nut.jpg" width="168" height="168" alt="">
             </a>
             <h3 class="product-card-title">
-              <a href="">Орешек</a>
+              <a href="#">Орешек</a>
             </h3>
             <p class="product-card-text">Фисташковый пломбир с&nbsp;шоколадным сиропом</p>
             <div class="product-card-action">
@@ -437,7 +436,7 @@
               <img src="img/catalog/icecream-brulee.jpg" width="168" height="168" alt="">
             </a>
             <h3 class="product-card-title">
-              <a href="">Крем-брюле</a>
+              <a href="#">Крем-брюле</a>
             </h3>
             <p class="product-card-text">Классическое крем&#8209;брюле</p>
             <div class="product-card-action">
@@ -455,7 +454,7 @@
           <a class="button button-main catalog-show-more" href="#">Показать ещё</a>
           <ul class="pagination catalog-pagination">
             <li class="pagination-start">
-              <a class="pagination-navigation pagination-navigation-disable pagination-navigation-start">
+              <a class="pagination-navigation pagination-navigation-start" href="#" aria-disabled="true">
                 <svg class="pagination-navigation-icon" aria-hidden="true" focusable="false" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                   <path d="M7.135 2.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94l4.669-4.669.003-.002a.664.664 0 0 0 0-.94L7.135 2.864Z" clip-rule="evenodd"/>
                 </svg>
@@ -463,7 +462,7 @@
               </a>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link" aria-current="page">
+              <a class="pagination-link" href="#" aria-current="page">
                 <span class="visually-hidden">Вы на странице </span>1
               </a>
             </li>
